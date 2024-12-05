@@ -1,4 +1,4 @@
-# Sitio Web Personal 
+# Sitio Web Personal Arruel
 
 Este repositorio contiene el código fuente de mi sitio web personal, un proyecto casual que desarrollo en mi tiempo libre. El sitio incluye un blog, un pequeño juego Flash, saludos personalizados para mis colegas, y una landing page que da la bienvenida a los visitantes.
 
@@ -44,6 +44,7 @@ El proyecto está organizado en las siguientes carpetas y archivos principales:
 1. Clona este repositorio en tu máquina local:  
    ```bash
    git clone https://github.com/Villarru/web-arruel.git
+
 
 ## Licence
 Este trabajo está licenciado bajo la Licencia Creative Commons Attribution 4.0 Internacional. Para más detalles, visita: https://creativecommons.org/licenses/by/4.0/
