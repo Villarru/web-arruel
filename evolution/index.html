@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="robots" content="noindex, nofollow">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="../src/css/nrm.css">
+    <link rel="stylesheet" href="../src/css/style.css">
+    <style>
+        section{ 
+            padding: 0px;
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-content: center;
+            place-items: center;
+            text-align: center;
+        }
+        section div{
+            margin: 0 auto;
+        }
+    </style>
+    
+    <title>Saludos</title>
+</head>
+<body>
+    <header>      
+        <nav>
+            <ul>
+                <li class="volver"><a href="/">Inicio</a></li>
+            </ul>
+             </nav>
+    </header>
+    
+    <section style="z-index: 10; min-height: 400px; max-width: 100%;">  
+        <div id='ruffle'></div>
+        <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+        <script>
+            const ruffle = window.RufflePlayer.newest();
+            const player = ruffle.createPlayer();
+        
+            const screenWidth = window.innerWidth - 15;
+        
+            let width = "900px";
+            let height = "675px";
+        
+            if (screenWidth < 374) {
+                width = "320px";
+                height = "240px";
+            } else if (screenWidth < 510) {
+                width = "370px";
+                height = "278px";
+            }else if (screenWidth < 920) {
+                width = "500px";
+                height = "375px";
+            
+            } else {
+                width = "900px";
+                height = "675px";
+            }
+        
+            player.style.width = width;
+            player.style.height = height;
+        
+            document.getElementById('ruffle').appendChild(player);
+            player.load('Evolution.swf').then(() => {
+                player.play();
+            });
+        </script>
+        
+        
+    </section>
+    <section class="respiro"></section>
+    <footer>
+        <p>&copy; 2024 Arruel. </p>
+    </footer>
+</body>
+</html>
