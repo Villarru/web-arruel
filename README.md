@@ -44,3 +44,8 @@ El proyecto está organizado en las siguientes carpetas y archivos principales:
 1. Clona este repositorio en tu máquina local:  
    ```bash
    git clone https://github.com/Villarru/web-arruel.git
+
+## Licence
+Este trabajo está licenciado bajo la Licencia Creative Commons Attribution 4.0 Internacional. Para más detalles, visita: https://creativecommons.org/licenses/by/4.0/
+
+
