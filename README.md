@@ -47,6 +47,8 @@ El proyecto está organizado en las siguientes carpetas y archivos principales:
 
 
 ## Licence
-Este trabajo está licenciado bajo la Licencia Creative Commons Attribution 4.0 Internacional. Para más detalles, visita: https://creativecommons.org/licenses/by/4.0/
+Este trabajo está licenciado bajo la Licencia Creative Commons Attribution 4.0 Internacional. 
+Atribuciones deben dirigirse a [Villarru](https://github.com/Villarru).  
+Para más detalles, visita: https://creativecommons.org/licenses/by/4.0/
 
 
