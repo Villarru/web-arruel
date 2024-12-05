@@ -22,7 +22,7 @@ El proyecto está organizado en las siguientes carpetas y archivos principales:
   - **`img/`**: Imágenes usadas en las distintas páginas del sitio.
 
 - **`index.html`**  
-  La página principal de mi sitio web, que sirve como la landing page. Desde aquí, los visitantes pueden navegar al blog, jugar *Evolution*, o explorar las páginas de saludos.
+  La página principal de mi sitio web, que sirve como la landing page. Con enlaces... y ya jaja.
 
 ## Tecnologías Utilizadas 🛠️
 
