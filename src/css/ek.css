@@ -1,0 +1,158 @@
+nav {
+    display: block;
+    width: 100%;
+    text-align: center;
+    max-height: 30px;
+    z-index: 5;
+    background-color: #1f1f1f;
+    padding: 20px 0;
+    color: white;
+    position: fixed;
+    top: 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+nav a:hover {
+    background-color: #3ea6b4;
+    border-radius: 5px;
+}
+
+.sky {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to top, #489ec0, #c9f4fc);
+    overflow: hidden;
+}
+
+
+
+.container {
+    position: fixed;
+    width: 100%;
+    bottom: 10px;
+}
+
+.tree {
+    position: relative;
+    width: 600px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+@media (max-width: 600px) {
+    .tree {
+        width: 400px;
+    }
+}
+
+@media (max-width: 400px) {
+    .tree {
+        width: 300px;
+    }
+}
+.tree img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Cesped*/
+.tree::before {
+    content: '';
+    position: absolute;
+    bottom: -25px;
+    left: -800px;
+    width: 400%;
+    height: 200px;
+    background: url('../img/grass.png') repeat-x;
+    background-size: contain;
+    z-index: -1;
+  }
+  
+
+
+#petals {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    pointer-events: none;
+}
+canvas {
+    position: absolute;
+    z-index: 5;  /* Asegúrate de que esté por encima de otros elementos */
+  }
+
+
+
+
+  .clouds-container {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+  }
+  
+  .cloud {
+    position: absolute;
+    bottom: 0; /* Mantiene las nubes en la parte inferior de la pantalla */
+    animation: moveClouds 10s linear infinite; /* Mueve las nubes de un lado a otro */
+  }
+  
+  /* Individual animations for each cloud */
+  .cloud1 {
+    z-index: 1;
+    animation-duration: 265s;
+  }
+  
+  .cloud2 {
+    z-index: 2;
+    animation-duration: 270s;
+  }
+  
+  .cloud3 {
+    z-index: 3;
+    animation-duration: 275s;
+  }
+  
+  .cloud4 {
+    z-index: 4;
+    animation-duration: 280s;
+  }
+  
+  .cloud5 {
+    z-index: 5;
+    animation-duration: 289s;
+  }
+  
+  /* Movimiento de las nubes de izquierda a derecha */
+  @keyframes moveClouds {
+    0% {
+      transform: translateX(-100%); /* Mueve las nubes desde fuera de la pantalla a la izquierda */
+    }
+    100% {
+      transform: translateX(100%); /* Mueve las nubes hacia la derecha completamente */
+    }
+  }
+  
