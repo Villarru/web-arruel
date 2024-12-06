@@ -1,0 +1,7 @@
+nav{
+    font-family: Arial, sans-serif;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 12;
+  }  

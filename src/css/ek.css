@@ -1,40 +1,4 @@
-nav {
-  display: block;
-  width: 100%;
-  text-align: center;
-  max-height: 30px;
-  z-index: 11;
-  background-color: #1f1f1f;
-  padding: 20px 0;
-  color: white;
-  position: fixed;
-  top: 0;
-}
 
-nav ul {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  justify-content: center;
-}
-
-nav ul li {
-  margin: 0 15px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  padding: 5px 10px;
-  text-align: center;
-  white-space: nowrap;
-}
-
-nav a:hover {
-  background-color: #3ea6b4;
-  border-radius: 5px;
-}
 
 .sky {
   position: absolute;
@@ -43,7 +7,6 @@ nav a:hover {
   background: linear-gradient(to top, #3aa4d4, #aaf2ff);
   overflow: hidden;
 }
-
 
 
 .container {

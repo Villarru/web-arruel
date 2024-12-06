@@ -45,76 +45,16 @@ h1 {
   
 }
 
-
-
-.volver{
-  border-radius: 5px;
-  background-color:rgb(37, 87, 110);
-  padding: 5px 0;
+.Saludos {
+  align-self: center;
+  width: 300px;
+  position: absolute;
+  top: 30vh;
+  left: 50%;
+  transform: translateX(-50%); /* Corrige la posición horizontal */
 }
 
-@keyframes move {
-  0% {
-    text-shadow:
-      4px -4px 0 hsla(210, 100%, 50%, 1), 
-      3px -3px 0 hsla(210, 100%, 50%, 1), 
-      2px -2px 0 hsla(210, 100%, 50%, 1), 
-      1px -1px 0 hsla(210, 100%, 50%, 1),
-      -4px 4px 0 hsla(180, 100%, 50%, 1), 
-      -3px 3px 0 hsla(180, 100%, 50%, 1), 
-      -2px 2px 0 hsla(180, 100%, 50%, 1), 
-      -1px 1px 0 hsla(180, 100%, 50%, 1)
-    ;
-  }
-  25% {    
-    text-shadow:      
-      -4px -4px 0 hsla(180, 100%, 50%, 1), 
-      -3px -3px 0 hsla(180, 100%, 50%, 1), 
-      -2px -2px 0 hsla(180, 100%, 50%, 1), 
-      -1px -1px 0 hsla(180, 100%, 50%, 1),
-      4px 4px 0 hsla(210, 100%, 50%, 1), 
-      3px 3px 0 hsla(210, 100%, 50%, 1), 
-      2px 2px 0 hsla(210, 100%, 50%, 1), 
-      1px 1px 0 hsla(210, 100%, 50%, 1)      
-    ;
-  }
-  50% {
-    text-shadow:
-      -4px 4px 0 hsla(210, 100%, 50%, 1), 
-      -3px 3px 0 hsla(210, 100%, 50%, 1), 
-      -2px 2px 0 hsla(210, 100%, 50%, 1), 
-      -1px 1px 0 hsla(210, 100%, 50%, 1),
-      4px -4px 0 hsla(180, 100%, 50%, 1), 
-      3px -3px 0 hsla(180, 100%, 50%, 1), 
-      2px -2px 0 hsla(180, 100%, 50%, 1), 
-      1px -1px 0 hsla(180, 100%, 50%, 1)
-    ;
-  }
-  75% {
-    text-shadow:
-      4px 4px 0 hsla(180, 100%, 50%, 1), 
-      3px 3px 0 hsla(180, 100%, 50%, 1), 
-      2px 2px 0 hsla(180, 100%, 50%, 1), 
-      1px 1px 0 hsla(180, 100%, 50%, 1),
-      -4px -4px 0 hsla(210, 100%, 50%, 1), 
-      -3px -3px 0 hsla(210, 100%, 50%, 1), 
-      -2px -2px 0 hsla(210, 100%, 50%, 1), 
-      -1px -1px 0 hsla(210, 100%, 50%, 1)      
-    ;
-  }
-  100% {
-    text-shadow:
-      4px -4px 0 hsla(210, 100%, 50%, 1), 
-      3px -3px 0 hsla(210, 100%, 50%, 1), 
-      2px -2px 0 hsla(210, 100%, 50%, 1), 
-      1px -1px 0 hsla(210, 100%, 50%, 1),
-      -4px 4px 0 hsla(180, 100%, 50%, 1), 
-      -3px 3px 0 hsla(180, 100%, 50%, 1), 
-      -2px 2px 0 hsla(180, 100%, 50%, 1), 
-      -1px 1px 0 hsla(180, 100%, 50%, 1)
-    ;
-  }  
-}
+
 
 body,html{
   width:100%;
