@@ -1,4 +1,4 @@
-# Sitio Web Personal Arruel
+# Sitio Web Arruel
 
 Este repositorio contiene el código fuente de mi sitio web personal, un proyecto casual que desarrollo en mi tiempo libre. El sitio incluye un blog, un pequeño juego Flash, saludos personalizados para mis colegas, y una landing page que da la bienvenida a los visitantes.
 
