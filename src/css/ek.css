@@ -1,158 +1,343 @@
 nav {
-    display: block;
-    width: 100%;
-    text-align: center;
-    max-height: 30px;
-    z-index: 5;
-    background-color: #1f1f1f;
-    padding: 20px 0;
-    color: white;
-    position: fixed;
-    top: 0;
+  display: block;
+  width: 100%;
+  text-align: center;
+  max-height: 30px;
+  z-index: 11;
+  background-color: #1f1f1f;
+  padding: 20px 0;
+  color: white;
+  position: fixed;
+  top: 0;
 }
 
 nav ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    justify-content: center;
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
 }
 
 nav ul li {
-    margin: 0 15px;
+  margin: 0 15px;
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
-    padding: 5px 10px;
-    text-align: center;
-    white-space: nowrap;
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  text-align: center;
+  white-space: nowrap;
 }
 
 nav a:hover {
-    background-color: #3ea6b4;
-    border-radius: 5px;
+  background-color: #3ea6b4;
+  border-radius: 5px;
 }
 
 .sky {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(to top, #489ec0, #c9f4fc);
-    overflow: hidden;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to top, #3aa4d4, #aaf2ff);
+  overflow: hidden;
 }
 
 
 
 .container {
-    position: fixed;
-    width: 100%;
-    bottom: 10px;
+  position: fixed;
+  width: 100%;
+  bottom: 10px;
+  z-index: 3;
 }
 
 .tree {
-    position: relative;
-    width: 600px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 3;
-}
-@media (max-width: 600px) {
-    .tree {
-        width: 400px;
-    }
+  position: relative;
+  width: 800px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-@media (max-width: 400px) {
-    .tree {
-        width: 300px;
-    }
-}
-.tree img{
-    max-width: 100%;
-    height: auto;
-}
-
-
-/* Cesped*/
-.tree::before {
-    content: '';
-    position: absolute;
-    bottom: -25px;
-    left: -800px;
-    width: 400%;
-    height: 200px;
-    background: url('../img/grass.png') repeat-x;
-    background-size: contain;
-    z-index: -1;
+@media (max-width: 800px) {
+  .tree {
+    width: 500px;
   }
-  
+}
+
+@media (max-width: 500px) {
+  .tree {
+    width: 400px;
+  }
+}
+
+.tree img {
+  max-width: 100%;
+  height: auto;
+}
+
+.tree::before {
+  content: '';
+  position: absolute;
+  bottom: -25px;
+  left: -800px;
+  width: 400%;
+  height: 200px;
+  background: url('../img/grass.png') repeat-x;
+  background-size: contain;
+  z-index: -1;
+}
+
 
 
 #petals {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 4;
-    pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 6;
+  pointer-events: none;
 }
+
 canvas {
-    position: absolute;
-    z-index: 5;  /* Asegúrate de que esté por encima de otros elementos */
-  }
+  position: absolute;
+  z-index: 6;
+}
 
 
 
 
-  .clouds-container {
-    position: relative;
-    width: 100%;
-    height: 50vh;
+.clouds-container {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+}
+
+.clouds-container2 {
+  position: fixed;
+  top: 30%;
+  width: 100%;
+  height: 50vh;
+  z-index: 2;
+}
+
+.cloud {
+  position: absolute;
+  bottom: 0;
+  animation: moveClouds 210s linear infinite;
+}
+
+
+.cloud1 {
+  z-index: 2;
+  animation-duration: 265s;
+}
+
+.cloud2 {
+  z-index: 2;
+  animation-duration: 270s;
+  top: 10px;
+}
+
+.cloud3 {
+  z-index: 2;
+  animation-duration: 275s;
+}
+
+.cloud4 {
+  z-index: 2;
+  animation-duration: 280s;
+  top: 15px;
+}
+
+.cloud5 {
+  z-index: 2;
+  animation-duration: 289s;
+  left: 320px;
+}
+
+.cloud6 {
+  z-index: 2;
+  animation-duration: 295s;
+  top: 20px;
+  left: 60px;
+}
+
+.cloud7 {
+  z-index: 2;
+  animation-duration: 270s;
+  top: 10px;
+  left: 195px;
+}
+
+.cloud8 {
+  z-index: 2;
+  animation-duration: 275s;
+  left: 135px;
+}
+
+.cloud9 {
+  z-index: 2;
+  animation-duration: 180s;
+  top: 18px;
+  left: 180px;
+}
+
+.cloud10 {
+  z-index: 2;
+  animation-duration: 229s;
+  top: 5px;
+  left: 120px;
+}
+
+@keyframes moveClouds {
+  0% {
+    transform: translateX(-100%);
   }
-  
-  .cloud {
-    position: absolute;
-    bottom: 0; /* Mantiene las nubes en la parte inferior de la pantalla */
-    animation: moveClouds 10s linear infinite; /* Mueve las nubes de un lado a otro */
+
+  100% {
+    transform: translateX(220%);
   }
-  
-  /* Individual animations for each cloud */
-  .cloud1 {
-    z-index: 1;
-    animation-duration: 265s;
+}
+
+.click {
+  position: fixed;
+  top: 65%;
+  left: 48%;
+  z-index: 9;
+
+}
+
+@media (max-width: 500px) {
+  .click {
+    position: fixed;
+    top: 65%;
+    left: 45%;
+    z-index: 9;
+
   }
-  
-  .cloud2 {
-    z-index: 2;
-    animation-duration: 270s;
+}
+
+#message {
+  position: fixed;
+  text-align: center;
+  top: 40%;
+  left: 50%;
+  min-width: 260px;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: white;
+  border: 2px solid tan;
+  border-radius: 8px;
+
+  -webkit-box-shadow: 0px 0px 20px -1px rgba(255, 255, 255, 0.5);
+    -moz-box-shadow: 0px 0px 20px -1px rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 0px 20px -1px rgba(255, 255, 255, 0.5);
+    display: none;
+}
+
+
+
+#message-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(105, 105, 105, 0.1);
+  z-index: 7;
+  display: none;
+  animation: fadeInMessage 2s forwards;
+}
+
+#message p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.hidden {
+  position: fixed;
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+  background-color: rgba(255, 255, 255, 0.9);
+
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 9;
+
+  opacity: 0;
+  animation: fallMessage 6s forwards;
+}
+
+@keyframes fallMessage {
+  0% {
+    top: -5%;
+
+    opacity: 0.65;
   }
-  
-  .cloud3 {
-    z-index: 3;
-    animation-duration: 275s;
+
+  95% {
+    top: 40%;
+    opacity: 0.90;
   }
-  
-  .cloud4 {
-    z-index: 4;
-    animation-duration: 280s;
+
+  100% {
+    top: 40%;
+    opacity: 0.95;
   }
-  
-  .cloud5 {
-    z-index: 5;
-    animation-duration: 289s;
+}
+
+p {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #422339;
+}
+
+.hidden-message {
+  opacity: 0;
+  font-size: 18px;
+  margin-top: 10px;
+  animation: fadeInMessage 6s 7s forwards;
+}
+
+@keyframes fadeInMessage {
+  0% {
+    opacity: 0;
   }
-  
-  /* Movimiento de las nubes de izquierda a derecha */
-  @keyframes moveClouds {
-    0% {
-      transform: translateX(-100%); /* Mueve las nubes desde fuera de la pantalla a la izquierda */
-    }
-    100% {
-      transform: translateX(100%); /* Mueve las nubes hacia la derecha completamente */
-    }
+
+  75% {
+    opacity: 1;
   }
-  
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.hidden-message-2 {
+  opacity: 0;
+  font-size: 18px;
+  margin-top: 10px;
+  animation: fadeInMessage2 8s 9s forwards;
+}
+
+@keyframes fadeInMessage2 {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
