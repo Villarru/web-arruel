@@ -43,9 +43,9 @@ function createPetal() {
   const petal = {
     x: Math.random() * canvas.width+30,
     y: -(Math.random() * 20 + 10),
-    size: Math.random() * 3 + 8, 
-    speedX: Math.random() * (maxSpeedX - minSpeedX) + minSpeedX, // Horizontal
-    speedY: Math.random() * (maxSpeedY - minSpeedY) + minSpeedY, // Vertical
+    size: Math.random() * 8 + 8, 
+    speedX: Math.random() * (maxSpeedX - minSpeedX) + minSpeedX, 
+    speedY: Math.random() * (maxSpeedY - minSpeedY) + minSpeedY,
     rotation: Math.random() * 180, 
     rotationSpeed: Math.random() * 2 - 1,
     image: new Image()
@@ -70,7 +70,7 @@ function animatePetals() {
     ctx.save();
     ctx.translate(petal.x, petal.y); 
     ctx.rotate(petal.rotation * Math.PI / 180); 
-    ctx.drawImage(petal.image, -petal.size / 2, -petal.size / 2, petal.size, petal.size); // Dibujar
+    ctx.drawImage(petal.image, -petal.size / 2, -petal.size / 2, petal.size, petal.size);
     ctx.restore();
 
     // Eliminar los pétalos
@@ -103,10 +103,10 @@ function startWind() {
 
 function checkScreenSize() {
   if (window.innerWidth < 700) {
-    isWindActive = false; // Desactivar el viento en pantallas pequeñas
+    isWindActive = false; 
     petalLimit = 30; 
   } else {
-    isWindActive = true; // Activar en pantallas grandes
+    isWindActive = true; 
     petalLimit = 60; 
   }
 }
@@ -138,7 +138,6 @@ document.body.appendChild(overlay);
 
 const clickableElements = document.querySelectorAll('.click');
 
-// Mostrar 
 clickableElements.forEach(element => {
   element.addEventListener('click', () => {
     overlay.style.display = 'block';
@@ -155,11 +154,20 @@ function getDayOfWeek() {
   return daysOfWeek[day];
 }
 
-// Inserta el dia
+
+//NOCHE
 document.addEventListener("DOMContentLoaded", function() {
   const dayOfWeek = getDayOfWeek();
   
+  const lastMess = document.querySelector('.hidden-message');
   const lastMessage = document.querySelector('.hidden-message-2');
   
-  lastMessage.innerHTML = `🌸 ¡Feliz ${dayOfWeek}! 🌸`;
+  if (isNightTime()) {   
+    lastMess.innerHTML = `Que las estrellas iluminen tus sueños`;  
+    lastMessage.innerHTML = `⭐ ¡Feliz ${dayOfWeek}! ⭐`;    
+  }else{
+    lastMess.innerHTML = `Que tu día esté lleno de bendiciones`;  
+    lastMessage.innerHTML = `🌸 ¡Feliz ${dayOfWeek}! 🌸`;
+  }
+  
 });

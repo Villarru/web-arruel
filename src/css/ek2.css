@@ -1,0 +1,108 @@
+
+body.night-mode {
+    background-color: #000; 
+  }
+
+.tree.night img {
+    content: url('../img/TreeN.png');
+}
+.sky-night {
+    position: absolute;
+    width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to top, #0a4166, #0c265e);
+    overflow: hidden;
+    z-index: 0;
+  }
+  
+  .sky-night::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); 
+    width: 100%; 
+    height: 100vh;
+    background: url('../img/stars.png') repeat-y; 
+    background-size: cover, cover;
+    opacity: 0.9;
+    z-index: 1;
+        
+    animation: moveStars 430s linear;
+  }
+  
+  @keyframes moveStars {
+    0% {
+      transform: translateX(-50%) translateY(0);
+    }
+    100% {
+      transform: translateX(-50%) translateY(-100%);
+    }
+  }
+  
+  @media (max-width: 1000px) {
+    .sky-night::after {
+        background: url('../img/starsmini.png') repeat-y; /* Estrellas fijas */
+        
+    }
+  }
+
+  @media (max-width: 600px) {
+      .sky-night::after {
+      
+    height: 100%; 
+      }
+  }
+
+
+  #petals-night {
+    display: none;
+  }
+  
+
+  canvas {
+    position: absolute;
+    z-index: 1; 
+  }
+  
+
+  .clouds-container,
+  .clouds-container2 {
+    display: none;
+  }
+  
+
+  .container-night {
+    position: fixed;
+    width: 100%;
+    bottom: 10px;
+    z-index: 2;
+  }
+  
+  .tree.night::before {
+    background: url('../img/grassN.png') repeat-x;
+    background-size: contain;
+    z-index: -1;
+  }
+
+svg.night .sign {
+    fill: rgb(94, 87, 64);
+    stroke: rgb(27, 27, 27);
+  }
+  
+  svg.night text {
+    fill: lightblue;
+  }
+  
+
+
+  #luz {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 80%;
+    pointer-events: none; 
+  }
